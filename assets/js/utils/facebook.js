@@ -1,11 +1,11 @@
 window.fbAsyncInit = function() {
   FB.init({
-    appId            : 1807162776265912,
+    appId            : '1807162776265912',
     autoLogAppEvents : true, //Habilita las cookies para que el server puede acceder a la sesion
     xfbml            : true, //parsea los plugins sociales en la pagina
-    version          : 'v2.9' //usa version 2.9
+    version          : 'v2.8' //usa version 2.9
   });
-  FB.AppEvents.logPageView();
+  // FB.AppEvents.logPageView();
 };
 
 
@@ -13,7 +13,7 @@ function loginHandler(response) {
     if(response.status  === 'connected') {
         state.status = 'Conectado';
         FB.api('/me?fields=email,name', user => {
-            status.user = user;
+            state.user = user;
             state.doRender();
         });
     } else if (response.status === 'not_authorized') {
@@ -22,8 +22,6 @@ function loginHandler(response) {
         state.doRender();
     }
 }
-
-
 function doLogin() {
     FB.login(loginHandler, {scope: 'email'});
 }

@@ -4,7 +4,7 @@ const render = (root) => {
     root.empty();
     const wrapper = $('<div class"wrapper"></div>');
     wrapper.append(Header());
-    if(state.user ==null) {
+    if(state.user == null) {
         wrapper.append(Login());
     } else {
         wrapper.append(Dashboard());
