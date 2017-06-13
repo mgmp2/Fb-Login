@@ -15,3 +15,6 @@ Sprint - 5 | 42 - AJAX Y API CALLS | Ejercicio guiado
 + Usar componentes
 + Implementar API de facebook
 + Tener propiamente una appID
+
+## GH-PAGES
+Nota: Este proyecto está subido al GH-PAGES [aquí](https://mgmp2.github.io/Fb-Login/).
